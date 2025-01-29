@@ -10,7 +10,8 @@ import {
     FETCH_MEALS_SUCCESS,
     FETCH_SINGLE_MEAL_BEGIN,
     FETCH_SINGLE_MEAL_ERROR,
-    FETCH_SINGLE_MEAL_SUCCESS
+    FETCH_SINGLE_MEAL_SUCCESS,
+    ADD_TO_FAVORITES
 } from "../actions/actions";
 
 export const mealReducer = (state, action) => {
@@ -83,7 +84,13 @@ export const mealReducer = (state, action) => {
                 categoryMealsLoading: false,
                 categoryMealsError: false
             }
+        case ADD_TO_FAVORITES: 
+            const isFavorite = state.favorites.some(favorite => favorite.id === action.payload.id);
+            return {
+                ...state,
+                favorites: isFavorite ? state.favorites : [...state.favorites, action.payload] 
+            };
         default: 
             return state;
     }
-}
+};

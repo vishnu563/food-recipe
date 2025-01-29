@@ -68,6 +68,14 @@
                 font-size: 24px;
                 border-bottom: 1px solid $clr-orange;
             }
+            .fav-btn{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                color: $clr-orange;
+                margin-top: 2rem;
+                font-weight: bold;
+            }
             .source{
                 a{
                     &:hover{
