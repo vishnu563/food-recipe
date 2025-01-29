@@ -32,7 +32,7 @@ const Navbar = () => {
               <span className='navbar-brand-text fw-7'>Recipe Finder.</span>
             </Link>
             <ul className='navbar-links'>
-            <li><Link to="/favorites">Favorites</Link></li> {/* Added Favorites link */}
+            <li><Link to="/favorites">Favorites</Link></li>
           </ul>
             <div className='navbar-btns flex align-center'>
               <button type="button" className='navbar-show-btn text-white' onClick={() => openSidebar()}>

@@ -36,7 +36,7 @@ export const MealProvider = ({children}) => {
             ...state,
             dispatch,
             startFetchCategories,
-            addToFavorites // Expose the addToFavorites function
+            addToFavorites 
         }}>
             {children}
         </MealContext.Provider>
